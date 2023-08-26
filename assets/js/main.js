@@ -265,6 +265,7 @@
         age--;
     }
     document.getElementById("age").innerHTML =age;
+    document.getElementById("copyright").innerHTML =today.getFullYear();
   });
 
 
