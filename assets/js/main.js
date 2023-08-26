@@ -254,6 +254,21 @@
     })
   });
 
+
+
+  window.addEventListener('load', () => {
+    var today = new Date();
+    var birthday = new Date(select('#birthday').innerText);
+    var age = today.getFullYear() - birthday.getFullYear();
+    var m = today.getMonth() - birthday.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthday.getDate())) {
+        age--;
+    }
+    document.getElementById("age").innerHTML =age;
+  });
+
+
+
   /**
    * Initiate Pure Counter 
    */
